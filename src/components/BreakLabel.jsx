@@ -11,7 +11,9 @@ const BreakLabel = ({ breakLength, onBreakClick }) => {
         >
           <i className="fas fa-arrow-up" />
         </button>
-        <span id="break-length">{breakLength}</span>
+        <span id="break-length">
+          <strong>{breakLength}</strong>
+        </span>
         <button
           id="break-decrement"
           className="btn btn-primary ml-2"

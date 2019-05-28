@@ -11,7 +11,9 @@ const SessionLabel = ({ sessionLength, onSessionClick }) => {
         >
           <i className="fas fa-arrow-up" />
         </button>
-        <span id="session-length">{sessionLength}</span>
+        <span id="session-length">
+          <strong>{sessionLength}</strong>
+        </span>
         <button
           id="session-decrement"
           className="btn btn-primary ml-2"
