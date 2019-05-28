@@ -1,10 +1,12 @@
 import React from "react";
 
-const Timer = ({ timeLeft }) => {
+const Timer = ({ minutesLeft, secondsLeft }) => {
   return (
     <div id="timer-label">
       Time Left
-      <h1 id="time-left">{timeLeft}</h1>
+      <h1 id="time-left">
+        {minutesLeft}:{("0" + secondsLeft).slice(-2)}
+      </h1>
     </div>
   );
 };

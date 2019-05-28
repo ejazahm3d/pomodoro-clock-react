@@ -1,9 +1,13 @@
 import React from "react";
 
-const TimerControl = ({ onResetClick }) => {
+const TimerControl = ({ onResetClick, onStartClick }) => {
   return (
     <div>
-      <button id="start_stop" className="btn btn-primary mr-2">
+      <button
+        id="start_stop"
+        className="btn btn-primary mr-2"
+        onClick={onStartClick}
+      >
         Start/Stop
       </button>
       <button
