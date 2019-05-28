@@ -55,6 +55,7 @@ const App = () => {
       clearInterval(intervalId.current);
     }
   };
+
   const handleCountdown = (minutes, seconds) => {
     const minsToSeconds = minutes * 60 + seconds;
 
@@ -82,8 +83,8 @@ const App = () => {
   };
 
   return (
-    <div className="App container">
-      <h1>Pomodoro Clock</h1>
+    <div className="App container text-center">
+      <h1 className="mb-5 text-secondary">Pomodoro Clock</h1>
       <BreakLabel breakLength={breakLength} onBreakClick={onBreakClick} />
       <SessionLabel
         sessionLength={sessionLength}
