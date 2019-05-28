@@ -10,6 +10,7 @@ const App = () => {
   const [minutesLeft, setMinutesLeft] = useState(25);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isSession, setIsSession] = useState(false);
   let intervalId = useRef(null);
 
   useEffect(() => {
@@ -50,6 +51,7 @@ const App = () => {
     if (!isPaused) {
       setIsPaused(true);
       handleCountdown(minutesLeft, secondsLeft);
+      setIsSession(true);
     } else if (isPaused) {
       setIsPaused(false);
       clearInterval(intervalId.current);
